@@ -1,8 +1,6 @@
 from timeseries_generator import LinearTrend, Generator, WhiteNoise, RandomFeatureFactor
 import pandas as pd
 
-%matplotlib inline
-
 lt = LinearTrend(coef=2.0, offset=1., col_name="my_linear_trend")
 
 g: Generator = Generator(factors={lt}, features=None, date_range=pd.date_range(start="01-01-2020", end="01-20-2020"))
